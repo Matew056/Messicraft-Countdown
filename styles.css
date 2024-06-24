@@ -1,24 +1,49 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/minecraft-webfont.woff2') format('woff2'),
+         url('fonts/minecraft-webfont.woff') format('woff');
+    /* Puedes agregar más formatos si es necesario */
+}
+
 body {
+    background-image: url('images/dirt_background.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Minecraft', Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
 .container {
+
     text-align: center;
-    background: #fff;
-    padding: 20px;
+    background-color: #f0f0f0;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    font-size: 16px; 
+    /*position: relative; /* Asegura que el contenedor sea el contexto de posición para la logo */
+    /*z-index: 1; /* Asegura que el contenedor esté por encima de la logo */
+    /*background-repeat: repeat-y; /* Repetir solo verticalmente */
 }
 
-h1 {
-    margin-bottom: 20px;
+.texto h1 {
+    background-color: #f0f0f0;
+    margin-bottom: 00px;
+    text-align: center;
+    background-clip: text; /* El fondo solo cubrirá el texto */
+    font-size: 64px; /* Tamaño de la fuente */
+    color: #f0f0f0;
+    text-shadow: 
+    -2px -2px 0 #000,  
+    20px -1px 0 #141414,
+    -2px 2px 0 #000,
+    10px 1px 0 #000; /* Contorno del texto */
+    
 }
+
 
 #countdown {
     display: flex;
@@ -35,4 +60,5 @@ h1 {
 
 #countdown span {
     font-size: 2em;
+    display: block; /* Cambia los números a mostrar en bloque */
 }
