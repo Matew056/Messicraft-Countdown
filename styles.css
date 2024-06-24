@@ -7,6 +7,9 @@
 
 body {
     background-image: url('images/dirt_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,14 +75,14 @@ body {
 
 @media (max-width: 768px) {
     .texto h1 {
-        font-size: 48px; /* Reduce el tamaño del título en dispositivos móviles */
+        font-size: 300%; /* Reduce el tamaño del título en dispositivos móviles */
     }
 
     #countdown {
         flex-direction: column; /* Coloca los contadores de tiempo en vertical */
         align-items: center; /* Centra los contadores en la pantalla */
         gap: 0.5em; /* Ajusta el espacio entre los contadores */
-        font-size: 24px;
+        font-size: 100%;
  
     }
 
