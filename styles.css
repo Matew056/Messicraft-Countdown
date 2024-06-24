@@ -14,6 +14,7 @@ body {
     margin: 0;
     font-family: 'Minecraft', Arial, sans-serif;
     background-color: #f0f0f0;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -23,10 +24,12 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 40px rgb(0, 0, 0);
-    font-size: 16px; 
+    font-size: 160%; 
     /*position: relative; /* Asegura que el contenedor sea el contexto de posición para la logo */
     /*z-index: 1; /* Asegura que el contenedor esté por encima de la logo */
     /*background-repeat: repeat-y; /* Repetir solo verticalmente */
+    flex-wrap: wrap;
+    
 }
 
 .texto h1 {
@@ -34,13 +37,14 @@ body {
     margin-bottom: 00px;
     text-align: center;
     background-clip: text; /* El fondo solo cubrirá el texto */
-    font-size: 64px; /* Tamaño de la fuente */
+    font-size: 640%; /* Tamaño de la fuente */
     color: #f0f0f0;
     text-shadow: 
     -2px -2px 0 #000,  
     20px -1px 0 #141414,
     -2px 2px 0 #000,
     10px 1px 0 #000; /* Contorno del texto */
+    flex-wrap: wrap;
     
 }
 
@@ -48,17 +52,45 @@ body {
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10%;
+    
 }
 
 #countdown div {
     background: #333;
     color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    
 }
 
 #countdown span {
     font-size: 2em;
     display: block; /* Cambia los números a mostrar en bloque */
+    
+}
+
+@media (max-width: 768px) {
+    .texto h1 {
+        font-size: 48px; /* Reduce el tamaño del título en dispositivos móviles */
+    }
+
+    #countdown {
+        flex-direction: column; /* Coloca los contadores de tiempo en vertical */
+        align-items: center; /* Centra los contadores en la pantalla */
+        gap: 0.5em; /* Ajusta el espacio entre los contadores */
+        font-size: 24px;
+ 
+    }
+
+    #countdown div {
+        width: 60%; /* Asegura que los contadores ocupen todo el ancho del contenedor */
+        text-align: center; /* Centra el texto dentro de los contadores */
+    }
+    .container {
+        width: 60%; /* Ajusta el ancho del contenedor en dispositivos móviles */
+        max-width: 90%; /* Asegura que el contenedor no sea demasiado grande en móviles */
+        padding: 15px; /* Ajusta el padding en dispositivos móviles */
+        margin: auto;
+    }
 }
