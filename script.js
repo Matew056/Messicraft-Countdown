@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     // Fecha de apertura del servidor: 6 de julio a las 18:00 hs
-    const targetDate = new Date('2024-07-06T18:00:00').getTime();
+    const targetDate = new Date('2025-01-01T18:00:00').getTime();
 
     const countdown = () => {
         const now = new Date().getTime();
